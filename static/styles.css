@@ -1,0 +1,164 @@
+/* Estilização geral */
+body {
+    background-color: #121212; /* Fundo escuro para um tema mais moderno */
+    color: #e0e0e0; /* Cor do texto clara */
+    font-family: 'Roboto', sans-serif;
+}
+
+.stSidebar {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.stSidebar .stSidebar-nav {
+    padding: 10px;
+}
+
+/* Estilização do menu lateral */
+.sidebar-menu {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.sidebar-menu a:hover {
+    color: #1e90ff; /* Cor de destaque */
+}
+
+.sidebar-menu .icon {
+    margin-right: 10px;
+}
+
+/* Estilização dos botões */
+.stButton {
+    
+    color: #ffffff; /* Cor do texto dos botões */
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+}
+
+
+
+/* Estilização das mensagens de alerta */
+.warning {
+    color: #ff4d4d; /* Vermelho para alerta */
+}
+
+/* Estilização dos títulos e parágrafos */
+h1, h2, h3, h4, h5, h6 {
+    color: #1e90ff; /* Cor dos títulos */
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem; /* Tamanho do título principal */
+    font-weight: bold; /* Negrito */
+}
+
+h2 {
+    font-size: 2rem; /* Tamanho do subtítulo */
+    font-weight: bold; /* Negrito */
+}
+
+h3 {
+    font-size: 1.5rem; /* Tamanho do título de nível 3 */
+    font-weight: bold; /* Negrito */
+}
+
+p {
+    font-size: 1.2rem; /* Tamanho padrão do texto */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin-bottom: 15px; /* Margem inferior para espaçamento */
+    font-weight: normal; /* Peso normal por padrão */
+}
+
+strong, b {
+    font-weight: bold; /* Negrito */
+}
+
+/* Estilização dos links */
+a {
+    color: #1e90ff; /* Cor dos links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Sublinhado no hover */
+}
+
+/* Estilização das imagens */
+img {
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+    max-width: 100%; /* Ajusta a imagem para não ultrapassar o container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilização das seções específicas da página Sobre o Projeto */
+/* Estilização das seções específicas da página Sobre o Projeto */
+.description {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.description h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1e90ff; /* Cor dos títulos */
+}
+
+.description h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e90ff; /* Cor dos subtítulos */
+}
+
+.description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description a {
+    color: #1e90ff; /* Cor dos links */
+    text-decoration: none;
+}
+
+.description a:hover {
+    text-decoration: underline; /* Sublinhado no hover */
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #e0e0e0;
+   
+}
+
+.footer a {
+    color: #1e90ff; /* Cor dos links */
+    text-decoration: none;
+    margin-right: 1rem;
+
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Sublinhado no hover */
+}
+.tech-icons {
+    font-size: 1.2rem; /* Tamanho dos ícones */
+    color: #1091e7; /* Cor dos ícones */
+    margin-right: 10px; /* Espaçamento entre os ícones */
+}
