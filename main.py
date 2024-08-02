@@ -6,7 +6,7 @@ from streamlit_option_menu import option_menu
 
 
 # Configuração da página principal
-st.set_page_config(page_title="CardioPredictor", page_icon="❤️🔍")
+st.set_page_config(page_title="CardioPredictor", page_icon="❤️")
 
 
 
