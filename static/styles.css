@@ -88,7 +88,7 @@ body {
 /* Estilização dos botões */
 .stButton {
     color: #008000; /* Cor do texto dos botões */
-    background-color: #e0e0e0; /* Fundo dos botões */
+   
     border-radius: 5px;
     padding: 10px;
     border: none;
@@ -106,12 +106,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.5rem; /* Tamanho do título principal */
+    font-size: 1.5rem; /* Tamanho do título principal */
     font-weight: bold; /* Negrito */
 }
 
 h2 {
-    font-size: 2rem; /* Tamanho do subtítulo */
+    font-size: 1.0rem; /* Tamanho do subtítulo */
     font-weight: bold; /* Negrito */
 }
 
