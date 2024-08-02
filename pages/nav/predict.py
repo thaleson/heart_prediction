@@ -15,10 +15,10 @@ def main():
     # Inputs para os dados
     age = st.number_input("Idade (anos)", min_value=0, max_value=120, value=0)
     gender = st.selectbox("Sexo", ["Selecione", "Masculino", "Feminino"], index=0)
-    height = st.number_input("Altura (cm)", min_value=100, max_value=250, value=100)
-    weight = st.number_input("Peso (kg)", min_value=30, max_value=200, value=30)
-    ap_hi = st.number_input("Pressão Arterial Sistólica", min_value=80, max_value=250, value=80)
-    ap_lo = st.number_input("Pressão Arterial Diastólica", min_value=40, max_value=150, value=40)
+    height = st.number_input("Altura (cm)", min_value=0, max_value=250, value=0)
+    weight = st.number_input("Peso (kg)", min_value=0, max_value=200, value=0)
+    ap_hi = st.number_input("Pressão Arterial Sistólica", min_value=0, max_value=250, value=0)
+    ap_lo = st.number_input("Pressão Arterial Diastólica", min_value=0, max_value=150, value=0)
     cholesterol = st.selectbox("Colesterol", ["Selecione", "Normal", "Acima do Normal", "Muito Acima do Normal"], index=0)
     gluc = st.selectbox("Glicose", ["Selecione", "Normal", "Acima do Normal", "Muito Acima do Normal"], index=0)
     smoke = st.selectbox("Fumante", ["Selecione", "Não", "Sim"], index=0)
@@ -58,35 +58,41 @@ def main():
         st.error(f"Erro: Esperado {expected_features} características, mas foram fornecidas {input_data.shape[1]}.")
         return
 
-    # Exibir barra de carregamento e fazer a previsão
+    # Verificar se todos os campos estão zerados
     if st.button("Prever"):
-        with st.spinner('Fazendo a previsão...'):
-            time.sleep(2)  # Simula um tempo de carregamento
-            
-            # Escalar os dados
-            input_data_scaled = scaler.transform(input_data)
+        if np.all(input_data == 0):
+            st.warning("Insira os dados, por favor, para poder prever.")
+        else:
+            with st.spinner('Fazendo a previsão...'):
+                time.sleep(2)  # Simula um tempo de carregamento
+                
+                # Escalar os dados
+                input_data_scaled = scaler.transform(input_data)
 
-            # Fazer a previsão
-            prediction = model.predict_proba(input_data_scaled)[0][1]
+                # Fazer a previsão
+                prediction = model.predict_proba(input_data_scaled)[0][1]
 
-            # Mostrar a previsão
-            if prediction > 0.5:
-                st.markdown(
-                    f"<h2 style='color:red;'>Sua chance de ter doença cardíaca é: {prediction * 100:.2f}% (Alta)</h2>",
-                    unsafe_allow_html=True
-                )
-                st.markdown(
-                    "<div style='background-color: #f8d7da; padding: 10px; border-radius: 5px;'>"
-                    "<p style='color: #721c24;'>A chance de você ter doença cardíaca é alta. Recomendamos que você procure um médico para uma avaliação mais detalhada.</p>"
-                    "</div>", unsafe_allow_html=True
-                )
-            else:
-                st.markdown(
-                    f"<h2 style='color:green;'>Sua chance de ter doença cardíaca é: {prediction * 100:.2f}% (Baixa)</h2>",
-                    unsafe_allow_html=True
-                )
-                st.markdown(
-                    "<div style='background-color: #d4edda; padding: 10px; border-radius: 5px;'>"
-                    "<p style='color: #155724;'>A chance de você ter doença cardíaca é baixa. Continue mantendo um estilo de vida saudável.</p>"
-                    "</div>", unsafe_allow_html=True
-                )
+                # Mostrar a previsão
+                if prediction > 0.5:
+                    st.markdown(
+                        f"<h2 style='color:red;'>Sua chance de ter doença cardíaca é: {prediction * 100:.2f}% (Alta)</h2>",
+                        unsafe_allow_html=True
+                    )
+                    st.markdown(
+                        "<div style='background-color: #f8d7da; padding: 10px; border-radius: 5px;'>"
+                        "<p style='color: #721c24;'>A chance de você ter doença cardíaca é alta. Recomendamos que você procure um médico para uma avaliação mais detalhada.</p>"
+                        "</div>", unsafe_allow_html=True
+                    )
+                else:
+                    st.markdown(
+                        f"<h2 style='color:green;'>Sua chance de ter doença cardíaca é: {prediction * 100:.2f}% (Baixa)</h2>",
+                        unsafe_allow_html=True
+                    )
+                    st.markdown(
+                        "<div style='background-color: #d4edda; padding: 10px; border-radius: 5px;'>"
+                        "<p style='color: #155724;'>A chance de você ter doença cardíaca é baixa. Continue mantendo um estilo de vida saudável.</p>"
+                        "</div>", unsafe_allow_html=True
+                    )
+
+if __name__ == "__main__":
+    main()
