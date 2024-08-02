@@ -192,3 +192,7 @@ img {
     color: #1091e7; /* Cor dos ícones */
     margin-right: 10px; /* Espaçamento entre os ícones */
 }
+
+#MainMenu {
+    visibility: hidden;
+}
