@@ -11,7 +11,7 @@ def main():
         <div class="description">
             <h1>Sobre o Projeto <span role="img" aria-label="heart">❤️</span></h1>
             <p>
-                Este projeto tem como objetivo a previsão de risco de doença cardíaca utilizando modelos de aprendizado de máquina. O modelo foi treinado com o dataset <a href="https://www.kaggle.com/datasets/siliconvalleyhackathon/heart-disease-dataset" target="_blank">Heart Disease Dataset</a>.
+                Este projeto tem como objetivo a previsão de risco de doença cardíaca utilizando modelos de aprendizado de máquina. O modelo foi treinado com o dataset <a href="https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset" target="_blank">Heart Disease Dataset</a>.
             </p>
             <h2>Algoritmo Utilizado <span role="img" aria-label="brain">🧠</span></h2>
             <p>
