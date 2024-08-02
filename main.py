@@ -3,8 +3,10 @@ from streamlit_option_menu import option_menu
 
 
 
+
 # Configuração da página principal
-st.set_page_config(page_title="Predict_cardio", page_icon="🏠")
+st.set_page_config(page_title="Heart Prediction", page_icon="❤️🔍")
+
 
 
 st.markdown(
