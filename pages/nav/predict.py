@@ -72,27 +72,27 @@ def main():
                 # Fazer a previsão
                 prediction = model.predict_proba(input_data_scaled)[0][1]
 
-                # Mostrar a previsão
-                if prediction > 0.5:
-                    st.markdown(
-                        f"<h2 style='color:red;'>Sua chance de ter doença cardíaca é: {prediction * 100:.2f}% (Alta)</h2>",
-                        unsafe_allow_html=True
-                    )
-                    st.markdown(
-                        "<div style='background-color: #f8d7da; padding: 10px; border-radius: 5px;'>"
-                        "<p style='color: #721c24;'>A chance de você ter doença cardíaca é alta. Recomendamos que você procure um médico para uma avaliação mais detalhada.</p>"
-                        "</div>", unsafe_allow_html=True
-                    )
-                else:
-                    st.markdown(
-                        f"<h2 style='color:green;'>Sua chance de ter doença cardíaca é: {prediction * 100:.2f}% (Baixa)</h2>",
-                        unsafe_allow_html=True
-                    )
-                    st.markdown(
-                        "<div style='background-color: #d4edda; padding: 10px; border-radius: 5px;'>"
-                        "<p style='color: #155724;'>A chance de você ter doença cardíaca é baixa. Continue mantendo um estilo de vida saudável.</p>"
-                        "</div>", unsafe_allow_html=True
-                    )
+            # Mostrar a previsão
+            if prediction > 0.5:
+                st.markdown(
+                    f"<h2 style='color:red;'>Sua chance de ter doença cardíaca é: {prediction * 100:.2f}% (Alta)</h2>",
+                    unsafe_allow_html=True
+                )
+                st.markdown(
+                    "<div style='background-color: #f8d7da; padding: 10px; border-radius: 5px;'>"
+                    "<p style='color: #721c24;'>A chance de você ter doença cardíaca é alta. Recomendamos que você procure um médico para uma avaliação mais detalhada.</p>"
+                    "</div>", unsafe_allow_html=True
+                )
+            else:
+                st.markdown(
+                    f"<h2 style='color:green;'>Sua chance de ter doença cardíaca é: {prediction * 100:.2f}% (Baixa)</h2>",
+                    unsafe_allow_html=True
+                )
+                st.markdown(
+                    "<div style='background-color: #d4edda; padding: 10px; border-radius: 5px;'>"
+                    "<p style='color: #155724;'>A chance de você ter doença cardíaca é baixa. Continue mantendo um estilo de vida saudável.</p>"
+                    "</div>", unsafe_allow_html=True
+                )
 
 if __name__ == "__main__":
     main()
