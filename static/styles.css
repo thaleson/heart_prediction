@@ -193,4 +193,10 @@ img {
     margin-right: 10px; /* Espaçamento entre os ícones */
 }
 
+#MainMenu {
+    visibility: hidden;
+}
 
+header {
+    visibility: hidden;
+}
