@@ -22,7 +22,7 @@ st.markdown(
 )
 
 # animações
-with open("animaçoes\pagina_inicial3.json") as source:
+with open("animaçoes/pagina_inicial3.json") as source:
     animacao_1 = json.load(source)
 
 
