@@ -13,9 +13,9 @@ def main():
     col1, col2 = st.columns(2)
 
     # Carregar animações
-    with open("animacoes/anumacoeshosptal/pagina_inicial3.json") as source:
+    with open("animaçoes/pagina_inicial1.json") as source:
         animacao_1 = json.load(source)
-    with open("animacoes/pagina_inicial2.json") as source:
+    with open("animaçoes/pagina_inicial2.json") as source:
         animacao_2 = json.load(source)
 
     # Conteúdo da coluna 1
