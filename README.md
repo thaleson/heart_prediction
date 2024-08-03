@@ -2,7 +2,9 @@
 
 Este projeto é uma aplicação de previsão de risco de doença cardíaca, desenvolvida com Python e Streamlit. A aplicação permite aos usuários inserir dados e obter uma previsão sobre a probabilidade de ter doença cardíaca.
 
-site: https://heartpredictionn.streamlit.app/
+site: https://cardiopredictor.streamlit.app/
+
+
 ## Funcionalidades 🚀
 
 - **Página Inicial**: Introdução e link para o LinkedIn.
