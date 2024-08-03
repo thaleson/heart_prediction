@@ -21,23 +21,11 @@ def main():
     # Conteúdo da coluna 1
     with col1:
         st_lottie(animacao_1, height=350, width=400)
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.markdown("<h5 style='text-align: justify;'>CardioPredictor é um  projeto visa fornecer previsões precisas sobre o risco de doenças cardíacas, ajudando a promover a saúde e o bem-estar. Acompanhe o progresso do projeto e explore as funcionalidades que oferecemos para uma análise detalhada e útil.</h5>", unsafe_allow_html=True)
+        st.markdown("<div style='margin-top: 10px;'><h5 style='text-align: justify;'>CardioPredictor é um projeto que visa fornecer previsões precisas sobre o risco de doenças cardíacas, ajudando a promover a saúde e o bem-estar. Acompanhe o progresso do projeto e explore as funcionalidades que oferecemos para uma análise detalhada e útil.</h5></div>", unsafe_allow_html=True)
 
     # Conteúdo da coluna 2
     with col2:
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.markdown("<h5 style='text-align: justify;'> Aqui, você terá a oportunidade de acompanhar todas as etapas envolvidas no desenvolvimento deste projeto, desde a concepção até a criação de um modelo de previsão personalizado, adaptado especificamente às características únicas de cada paciente.</h5>", unsafe_allow_html=True)
+        st.markdown("<div style='margin-top: 10px;'><h5 style='text-align: justify;'>Aqui, você terá a oportunidade de acompanhar todas as etapas envolvidas no desenvolvimento deste projeto, desde a concepção até a criação de um modelo de previsão personalizado, adaptado especificamente às características únicas de cada paciente.</h5></div>", unsafe_allow_html=True)
         st_lottie(animacao_2, height=400, width=440)
 
     # Adicionando um aviso
