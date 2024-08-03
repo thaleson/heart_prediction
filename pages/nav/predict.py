@@ -10,7 +10,7 @@ def main():
 
     st.title("Previsão de Doença Cardíaca")
 
-    st.write("Preencha os dados abaixo para fazer a previsão (os campos podem ser deixados em branco se não quiser preencher):")
+    st.write("Preencha os dados abaixo para fazer a previsão (Alguns campos podem ser deixados em branco se não quiser preencher):")
 
     # Inputs para os dados
     age = st.number_input("Idade (anos)", min_value=0, max_value=120, value=0)
