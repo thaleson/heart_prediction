@@ -1,6 +1,8 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-
+from streamlit_extras.colored_header import colored_header
+from streamlit_lottie import st_lottie
+import json
 
 
 
@@ -19,9 +21,25 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# animações
+with open("animaçoes\pagina_inicial3.json") as source:
+    animacao_1 = json.load(source)
+
+
 def main():
     # Configuração do menu lateral
     with st.sidebar:
+
+
+        #exibir animação
+        st_lottie(animacao_1, height=100, width=270)
+
+        # marcador azul
+        colored_header(
+        label="",
+        description="",
+        color_name="light-blue-70"
+        )
         selection = option_menu(
             menu_title="Navegação",
             options=["Home", "Sobre o Projeto", "Previsão","Visão dos dados"],
